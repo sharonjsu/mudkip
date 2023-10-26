@@ -22,7 +22,7 @@ from scipy.stats import binned_statistic
 from scipy.interpolate import interp1d
 from scipy.optimize import curve_fit
 
-from axolotl.utils.windowing import simple_rolling_window
+from mudkip.utils.windowing import simple_rolling_window
 from sklearn.base import RegressorMixin, BaseEstimator
 
 

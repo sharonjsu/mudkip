@@ -59,7 +59,7 @@ class Psths:
     def create_interpolate(
         self, before=0, after=0, interpolate_dt=0.1,
     ):
-       """
+        """
         Create long PSTH dataframe and interpolate signal array.
 
         Parameters:
@@ -70,7 +70,7 @@ class Psths:
         Returns:
             pandas.DataFrame: Long-format PSTH dataframe.
         """
-
+        
         start = np.array(self.events[self.delay_key]) - before
         if self.dur_key is not None:
             after = after + np.array(self.events[self.dur_key])
