@@ -8,12 +8,17 @@ import numpy as np
 import pandas as pd
 from scipy.interpolate import interp1d
 
-from dreye.stimuli.variables import SYNCED_DELAY_KEY, DUR_KEY, PAUSE_KEY
+# from dreye.stimuli.variables import SYNCED_DELAY_KEY, DUR_KEY, PAUSE_KEY
+#todo define these variables here; they're just strings
 
 
 PSTH_COL = 'psth'
 TIME_COL = 'time'
 
+
+DUR_KEY = 'dur'
+SYNCED_DUR_KEY = 'synced_dur'
+PAUSE_KEY = 'pause'
 
 class Psths:
     """
@@ -70,7 +75,7 @@ class Psths:
         Returns:
             pandas.DataFrame: Long-format PSTH dataframe.
         """
-        
+
         start = np.array(self.events[self.delay_key]) - before
         if self.dur_key is not None:
             after = after + np.array(self.events[self.dur_key])
